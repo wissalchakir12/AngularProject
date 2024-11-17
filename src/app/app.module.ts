@@ -10,6 +10,7 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProduitListComponent } from './components/produit-list/produit-list.component';
 import { ProduitAddComponent } from './components/produit-add/produit-add.component';
+import { ProduitEditComponent } from './components/produit-edit/produit-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProduitAddComponent } from './components/produit-add/produit-add.compon
     ClientAddComponent,
     ClientEditComponent,
     ProduitListComponent,
-    ProduitAddComponent
+    ProduitAddComponent,
+    ProduitEditComponent
 
   ],
   imports: [

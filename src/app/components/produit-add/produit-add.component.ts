@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
   styleUrl: './produit-add.component.css'
 })
 export class ProduitAddComponent {
-  client: Produit = new Produit();
+  produit: Produit = new Produit();
 
   constructor(private produitService: ProduitService, private router: Router) {}
 
-  addClient(): void {
-    this.produitService.createProduit(this.client).subscribe(() => {
-      this.router.navigate(['/clients']);
+  addProduit(): void {
+    this.produitService.createProduit(this.produit).subscribe(() => {
+      this.router.navigate(['/produits']);
     });
   }
 }

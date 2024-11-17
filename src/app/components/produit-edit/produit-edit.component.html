@@ -1,22 +1,22 @@
 <div>
-    <form (ngSubmit)="addProduit()">
+    <form (ngSubmit)=" updateClient()">
      <div>
        <label for="nom">Nom:</label>
        <input type="text" id="nom" [(ngModel)]="produit.nom" name="nom" required />
      </div>
      <div>
-       <label for="prenom">marque:</label>
+       <label for="prenom">Marque:</label>
        <input type="text" id="marque" [(ngModel)]="produit.marque" name="marque" required />
      </div>
      <div>
        <label for="tel">Prix:</label>
-       <input type="number" id="prix" [(ngModel)]="produit.prix" name="prix" required />
+       <input type="number" id="prix" [(ngModel)]="produit.prix" name="tel" required />
      </div>
      <div>
-       <label for="email">Stock:</label>
-       <input  type="number" id="stock" [(ngModel)]="produit.qteStock" name="Stock" required />
+       <label for="quantite">Quantite:</label>
+       <input type="email" id="email" [(ngModel)]="produit.qteStock" name="qteStock" required />
      </div>
-    
+     
      <button type="submit">{{ produit.id ? 'Update' : 'Add' }}</button>
    </form>
  </div>

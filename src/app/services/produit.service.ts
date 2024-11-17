@@ -7,7 +7,7 @@ import { Produit } from '../models/Produit';
   providedIn: 'root'
 })
 export class ProduitService {
-  private baseUrl = 'http://localhost:8080/produit/'; 
+  private baseUrl = 'http://localhost:8080/produits/'; 
 
   
   constructor(private http: HttpClient) { }
@@ -23,10 +23,10 @@ export class ProduitService {
   }
 
   // Create a new client
-  createProduit(client: Produit): Observable<Produit> {
-    return this.http.post<Produit>(this.baseUrl, client);
+  createProduit(produit: Produit): Observable<Produit> {
+    return this.http.post<Produit>(`${this.baseUrl}add`, produit); 
   }
-
+  
   // Update a client
   updateProduit(id: number, client: Produit): Observable<Produit> {
     return this.http.put<Produit>(`${this.baseUrl}/${id}`, client);

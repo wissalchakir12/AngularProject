@@ -18,7 +18,7 @@ export class ProduitListComponent {
     });
   }
 
-  deleteClient(id: number): void {
+  deleteProduit(id: number): void {
     this.produitService.deleteProduit(id).subscribe(() => {
     this.produits = this.produits.filter(produit => produit.id !== id);
     });
