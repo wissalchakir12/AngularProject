@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ClientListComponent } from './components/client-list/client-list.component';
 import { ClientAddComponent } from './components/client-add/client-add.component';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,11 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, //pour les routes
     FormsModule,
-    HttpClientModule // Ajoutez cette ligne
+    HttpClientModule,// Ajoutez cette ligne
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
 
 const routes: Routes = [
   { path: '', component: ClientListComponent }, // La page d'accueil
-  { path: 'client-list', component: ClientListComponent }, // Liste des clients
+  { path: 'clients', component: ClientListComponent }, // Liste des clients
   { path: 'add-client', component: ClientAddComponent }, // La route vers le formulaire d'ajout
   { path: 'edit-client/:id', component: ClientEditComponent }, // Route d'édition de client avec ID
 ];
