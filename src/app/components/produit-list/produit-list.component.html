@@ -1,0 +1,26 @@
+<div class="client-list-card">
+    <h2>Produit List</h2>
+    <a routerLink="/add-produit">Add Produit</a>
+    
+    <table class="client-table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Marque</th>
+          <th>Prix</th>
+          <th>Quantité de stock</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of produits">
+          <td>{{ produit.nom }}</td>
+          <td>{{ produit.marque }}</td>
+          <td>{{ produit.prix }}</td>
+          <td>{{ produit.qteStock }}</td>
+          
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>

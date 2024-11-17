@@ -8,13 +8,18 @@ import { ClientListComponent } from './components/client-list/client-list.compon
 import { ClientAddComponent } from './components/client-add/client-add.component';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProduitListComponent } from './components/produit-list/produit-list.component';
+import { ProduitAddComponent } from './components/produit-add/produit-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientListComponent,
     ClientAddComponent,
-    ClientEditComponent
+    ClientEditComponent,
+    ProduitListComponent,
+    ProduitAddComponent
+
   ],
   imports: [
     BrowserModule,

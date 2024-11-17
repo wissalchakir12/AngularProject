@@ -1,0 +1,16 @@
+.form-label{
+ font-size: 18px;
+}
+.Wbtn{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding:7px 23px; 
+    background-color: rgb(125, 172, 219);
+    color: black;
+    width: 20%;
+    
+}
+.Wbtn:hover{
+    color: white;
+    background-color: rgb(165, 201, 234);
+}
