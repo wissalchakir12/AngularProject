@@ -6,6 +6,7 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
 import { ProduitListComponent } from './components/produit-list/produit-list.component';
 import { ProduitAddComponent } from './components/produit-add/produit-add.component';
 import { ProduitEditComponent } from './components/produit-edit/produit-edit.component';
+import { VenteListComponent } from './components/vente-list/vente-list.component';
 
 const routes: Routes = [
   { path: '', component: ClientListComponent }, // La page d'accueil
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'produits', component: ProduitListComponent },
   { path: 'add-produit', component: ProduitAddComponent },
   { path: 'edit-produit/:id', component: ProduitEditComponent },
+  { path: 'vente-list', component: VenteListComponent },
 
 
   

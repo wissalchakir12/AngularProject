@@ -12,8 +12,15 @@
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(244, 246, 248);
+
 
 }
+
+
+
+
 .Wbtn{
   border: 1px solid gray;
     border-radius: 15px;
@@ -29,10 +36,9 @@
 
 .client-list-card h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 25px;
-    color: black;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(125, 172, 219);
 }
 
 

@@ -7,7 +7,7 @@ import { Produit } from '../models/Produit';
   providedIn: 'root'
 })
 export class ProduitService {
-  private baseUrl = 'http://localhost:8080/produits/'; 
+  private baseUrl = 'http://localhost:8080/ProduitsService/api/produits'; 
 
   
   constructor(private http: HttpClient) { }
@@ -24,7 +24,7 @@ export class ProduitService {
 
   // Create a new client
   createProduit(produit: Produit): Observable<Produit> {
-    return this.http.post<Produit>(`${this.baseUrl}add`, produit); 
+    return this.http.post<Produit>(`${this.baseUrl}/add`, produit); 
   }
   
   // Update a client

@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProduitListComponent } from './components/produit-list/produit-list.component';
 import { ProduitAddComponent } from './components/produit-add/produit-add.component';
 import { ProduitEditComponent } from './components/produit-edit/produit-edit.component';
+import { VenteListComponent } from '../app/components/vente-list/vente-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProduitEditComponent } from './components/produit-edit/produit-edit.com
     ClientEditComponent,
     ProduitListComponent,
     ProduitAddComponent,
-    ProduitEditComponent
+    ProduitEditComponent,
+    VenteListComponent
 
   ],
   imports: [
