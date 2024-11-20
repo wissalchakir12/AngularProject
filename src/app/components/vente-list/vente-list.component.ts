@@ -8,7 +8,9 @@ import { Vente } from '../../models/Vente';
   styleUrls: ['./../../components/vente-list/vente-list.component.css'],
 })
 export class VenteListComponent implements OnInit {
+
   ventes: Vente[] = [];
+  selectedVente: Vente | null = null;  // Ajouter une vente sélectionnée pour l'édition
 
   constructor(private venteService: VenteService) {}
 
@@ -18,7 +20,7 @@ export class VenteListComponent implements OnInit {
 
   // Récupérer toutes les ventes
   getAllVentes(): void {
-    this.venteService.getVentes().subscribe(
+    this.venteService.getVents().subscribe(
       (data) => {
         this.ventes = data;
         console.log('Ventes récupérées :', this.ventes);
@@ -28,11 +30,18 @@ export class VenteListComponent implements OnInit {
       }
     );
   }
+
+  // Supprimer une vente
   deleteVente(id: number): void {
     this.venteService.deleteVente(id).subscribe(() => {
-    this.ventes = this.ventes.filter(vente => vente.id !== id);
+      this.ventes = this.ventes.filter((vente) => vente.id !== id);
     });
   }
-}
 
+ 
+
+  // Sélectionner une vente à modifier
+  
+  
+  }
 

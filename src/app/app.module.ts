@@ -12,6 +12,8 @@ import { ProduitListComponent } from './components/produit-list/produit-list.com
 import { ProduitAddComponent } from './components/produit-add/produit-add.component';
 import { ProduitEditComponent } from './components/produit-edit/produit-edit.component';
 import { VenteListComponent } from '../app/components/vente-list/vente-list.component';
+import { VenteAddComponent } from './components/vente-add/vente-add.component';
+import { VenteEditComponent } from './components/vente-edit/vente-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { VenteListComponent } from '../app/components/vente-list/vente-list.comp
     ProduitListComponent,
     ProduitAddComponent,
     ProduitEditComponent,
-    VenteListComponent
+    VenteListComponent,
+    VenteAddComponent,
+    VenteEditComponent
 
   ],
   imports: [

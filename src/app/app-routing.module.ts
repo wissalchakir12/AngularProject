@@ -7,6 +7,9 @@ import { ProduitListComponent } from './components/produit-list/produit-list.com
 import { ProduitAddComponent } from './components/produit-add/produit-add.component';
 import { ProduitEditComponent } from './components/produit-edit/produit-edit.component';
 import { VenteListComponent } from './components/vente-list/vente-list.component';
+import { VenteAddComponent } from './components/vente-add/vente-add.component';
+import { VenteEditComponent } from './components/vente-edit/vente-edit.component';
+
 
 const routes: Routes = [
   { path: '', component: ClientListComponent }, // La page d'accueil
@@ -17,6 +20,10 @@ const routes: Routes = [
   { path: 'add-produit', component: ProduitAddComponent },
   { path: 'edit-produit/:id', component: ProduitEditComponent },
   { path: 'vente-list', component: VenteListComponent },
+  { path: 'vente-add', component: VenteAddComponent },
+  { path: 'ventes', component: VenteListComponent },
+  { path: 'vente-edit/:id', component: VenteEditComponent },
+
 
 
   

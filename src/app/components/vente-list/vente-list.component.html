@@ -18,10 +18,17 @@
       <td>{{ vente.quantite }}</td>
       <td>{{ vente.date }}</td>
       <td>{{ vente.client }}</td>
+      
      
       <td>
-        <!-- Ajouter des actions ici -->
+        <!-- Pour modifier je dois passer les ids des ventes pour récupérer les informations de la vente lors de la modification  -->
         <button (click)="deleteVente(vente.id)">Delete</button>
+        <a [routerLink]="['/vente-edit', vente.id]" class="btn btn-warning btn btn-warning btn-sm Edit mb-2 mb-sm-0  Edit">
+          <i class="fas fa-edit"></i> Edit
+        </a>
+        
+        
+
       </td>
     </tr>
   </tbody>

@@ -1,38 +1,39 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Vente } from '../models/Vente';
 
+import { Vente } from '../models/Vente';
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class VenteService {
-  private baseUrl = 'http://localhost:8080/SaleManagementService/api/ventes'; // URL de l'API pour les ventes
 
-  constructor(private http: HttpClient) {}
+  private baseUrl = 'http://localhost:8080/SaleManagementService/api/ventes'; // Your Spring Boot API base URL
 
-  // Récupérer toutes les ventes
-  getVentes(): Observable<Vente[]> {
+  constructor(private http: HttpClient) { }
+
+  // Fetch all clients
+  getVents(): Observable<Vente[]> {
     return this.http.get<Vente[]>(this.baseUrl);
   }
 
-  // Récupérer une vente par son ID
+  // Fetch a single client by ID
   getVente(id: number): Observable<Vente> {
     return this.http.get<Vente>(`${this.baseUrl}/${id}`);
   }
 
-  // Créer une nouvelle vente
-  createVente(vente: Vente): Observable<Vente> {
-    return this.http.post<Vente>(`${this.baseUrl}`, vente);
+  // Create a new client
+  createVente(client: Vente): Observable<Vente> {
+    return this.http.post<Vente>(this.baseUrl, client);
   }
 
-  // Mettre à jour une vente existante
+  // Update a client
   updateVente(id: number, vente: Vente): Observable<Vente> {
     return this.http.put<Vente>(`${this.baseUrl}/${id}`, vente);
   }
 
-  // Supprimer une vente
-  deleteVente(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  // Delete a client
+  deleteVente(id: number): Observable<Vente> {
+    return this.http.delete<Vente>(`${this.baseUrl}/${id}`);
   }
 }
