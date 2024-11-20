@@ -8,7 +8,7 @@ import { Vente } from '../models/Vente';
 })
 export class VenteService {
 
-  private baseUrl = 'http://localhost:8080/SaleManagementService/api/ventes'; // Your Spring Boot API base URL
+  private baseUrl = 'http://localhost:8080/SaleManagementService/api/ventes'; // Your Spring Boot API base URL 
 
   constructor(private http: HttpClient) { }
 

@@ -7,33 +7,37 @@ import { Produit } from '../models/Produit';
   providedIn: 'root'
 })
 export class ProduitService {
-  private baseUrl = 'http://localhost:8080/ProduitsService/api/produits'; 
+  private baseUrl = 'http://localhost:8080/SaleManagementService/api/produits';
 
-  
   constructor(private http: HttpClient) { }
 
-  // Fetch all clients
+  // Récupérer tous les produits
   getProduits(): Observable<Produit[]> {
     return this.http.get<Produit[]>(this.baseUrl);
   }
 
-  // Fetch a single client by ID
-  getProduit(id: number): Observable<Produit> {
+  // Récupérer un produit par ID
+  getProduitById(id: number): Observable<Produit> {
     return this.http.get<Produit>(`${this.baseUrl}/${id}`);
   }
 
-  // Create a new client
-  createProduit(produit: Produit): Observable<Produit> {
-    return this.http.post<Produit>(`${this.baseUrl}/add`, produit); 
-  }
-  
-  // Update a client
-  updateProduit(id: number, client: Produit): Observable<Produit> {
-    return this.http.put<Produit>(`${this.baseUrl}/${id}`, client);
+  // Ajouter un produit
+  addProduit(produit: Produit): Observable<Produit> {
+    return this.http.post<Produit>(`${this.baseUrl}/add`, produit);
   }
 
-  // Delete a client
+  // Mettre à jour un produit
+  updateProduit(id: number, produit: Produit): Observable<Produit> {
+    return this.http.put<Produit>(`${this.baseUrl}/${id}`, produit);
+  }
+
+  // Supprimer un produit par ID
   deleteProduit(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
+
+  // Vider tous les produits (si supporté par l'API)
+  deleteAllProduits(): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/vider`);
   }
 }

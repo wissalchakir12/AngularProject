@@ -14,7 +14,7 @@ export class ProduitAddComponent {
   constructor(private produitService: ProduitService, private router: Router) {}
 
   addProduit(): void {
-    this.produitService.createProduit(this.produit).subscribe(() => {
+    this.produitService.addProduit(this.produit).subscribe(() => {
       this.router.navigate(['/produits']);
     });
   }

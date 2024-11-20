@@ -19,7 +19,7 @@ export class ProduitEditComponent {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
-    this.produitService.getProduit(id).subscribe(data => {
+    this.produitService.getProduitById(id).subscribe(data => {
       this.produit = data;
     });
   }
