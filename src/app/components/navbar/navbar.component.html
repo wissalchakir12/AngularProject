@@ -1,13 +1,33 @@
-<!-- navbar.component.html -->
 <nav class="navbar">
-  <button id="menu-toggle" class="menu-btn">☰</button>
-  <h1>Main Menu</h1>
-  <a routerLink="/">Accueil</a>
-  <a routerLink="/clients">Clients</a>
-  <a routerLink="/produits">produits</a>
-  <ul class="nav-links">
+  <div class="likeInput">
+    <i class="fa-solid fa-arrow-trend-up" style="margin-right: 10px;"></i> 
+    Manage your sales
+  </div>
+
+  <div class="content"> 
+    <div class="focusz">
+      <a routerLink="/">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </div>
    
-    <li></li>
-    <li></li>
-  </ul>
+    <a routerLink="/clients">
+      <i class="fa-solid fa-user"></i> Customers
+      
+    </a>
+    <a routerLink="/produits">
+      <i class="fa-solid fa-box"></i> Products
+    </a>
+    <a routerLink="/ventes">
+      <i class="fa-solid fa-cart-shopping"></i> Sales
+    </a>
+    <a routerLink="/ventes">
+      <i class="fa-solid fa-arrow-trend-up"></i> Insights
+    </a>
+    <a routerLink="/ventes">
+      <i class="fa-solid fa-file"></i> Factures
+    </a>
+  </div>
+
+  <a routerLink="#" class="a"><i class="fa-solid fa-gear "></i>Seettings</a>
 </nav>

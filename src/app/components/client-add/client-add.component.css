@@ -4,16 +4,24 @@
     padding: 50px;
     display: flex;
     flex-direction: row; 
-    justify-content: space-between; 
+    width:60vw;
+    padding: 20px;
+    border-radius: 8px;
     align-items: center;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un effet visuel élégant */
     gap: 50px; 
+    display: flex;
+    margin-left:200px;
+    margin-top: 100px;
+   
 }
+
+
 
 .form-section {
     flex: 1; /* Le formulaire occupe une part égale avec l'image */
     margin-right: 20px; /* Ajout d'un espacement pour éviter qu'ils ne soient trop proches */
-    
+    margin-top: 50px;
     padding: 2px;
 }
 
@@ -50,6 +58,7 @@
     .container {
         flex-direction: column; 
         padding: 20px; 
+        margin-left:30px;
     }
     .form-section input{
         width:100%;
