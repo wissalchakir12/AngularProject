@@ -1,22 +1,42 @@
-<div>
-    <form (ngSubmit)="addProduit()">
-     <div>
-       <label for="nom">Nom:</label>
-       <input type="text" id="nom" [(ngModel)]="produit.nom" name="nom" required />
-     </div>
-     <div>
-       <label for="prenom">marque:</label>
-       <input type="text" id="marque" [(ngModel)]="produit.marque" name="marque" required />
-     </div>
-     <div>
-       <label for="tel">Prix:</label>
-       <input type="number" id="prix" [(ngModel)]="produit.prix" name="prix" required />
-     </div>
-     <div>
-       <label for="email">Stock:</label>
-       <input  type="number" id="stock" [(ngModel)]="produit.qteStock" name="Stock" required />
-     </div>
-    
-     <button type="submit">{{ produit.id ? 'Update' : 'Add' }}</button>
-   </form>
- </div>
+<div class="container mt-5">
+  <div class="form-section">
+    <h1>Ajouter un Produit</h1>
+    <form [formGroup]="produitForm" (ngSubmit)="addProduit()">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom:</label>
+        <input type="text" id="nom" formControlName="nom" class="form-control" />
+        <p *ngIf="produitForm.get('nom')?.invalid && produitForm.get('nom')?.touched" class="text-danger">
+          Nom est requis.
+        </p>
+      </div>
+
+      <div class="mb-3">
+        <label for="marque" class="form-label">Marque:</label>
+        <input type="text" id="marque" formControlName="marque" class="form-control" />
+        <p *ngIf="produitForm.get('marque')?.invalid && produitForm.get('marque')?.touched" class="text-danger">
+          Marque est requise.
+        </p>
+      </div>
+
+      <div class="mb-3">
+        <label for="prix" class="form-label">Prix:</label>
+        <input type="number" id="prix" formControlName="prix" class="form-control" />
+        <p *ngIf="produitForm.get('prix')?.invalid && produitForm.get('prix')?.touched" class="text-danger">
+          Prix est requis et doit être supérieur ou égal à 0.
+        </p>
+      </div>
+
+      <div class="mb-3">
+        <label for="stock" class="form-label">Stock:</label>
+        <input type="number" id="stock" formControlName="stock" class="form-control" />
+        <p *ngIf="produitForm.get('stock')?.invalid && produitForm.get('stock')?.touched" class="text-danger">
+          Stock est requis et doit être supérieur ou égal à 0.
+        </p>
+      </div>
+
+      <button type="submit" class="Wbtn" [disabled]="produitForm.invalid">{{ produitForm.value.id ? 'Mettre à jour' : 'Ajouter' }}</button>
+    </form>
+  </div>
+
+  <img src="assets/addProd.png" alt="Ajouter un Produit" class="addclient"/>
+</div>

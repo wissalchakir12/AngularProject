@@ -14,6 +14,9 @@ import { ProduitEditComponent } from './components/produit-edit/produit-edit.com
 import { VenteListComponent } from '../app/components/vente-list/vente-list.component';
 import { VenteAddComponent } from './components/vente-add/vente-add.component';
 import { VenteEditComponent } from './components/vente-edit/vente-edit.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { VenteEditComponent } from './components/vente-edit/vente-edit.component
     ProduitEditComponent,
     VenteListComponent,
     VenteAddComponent,
-    VenteEditComponent
+    VenteEditComponent,
+    NavbarComponent,
+    HomeComponent
 
   ],
   imports: [
@@ -37,7 +42,9 @@ import { VenteEditComponent } from './components/vente-edit/vente-edit.component
     ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

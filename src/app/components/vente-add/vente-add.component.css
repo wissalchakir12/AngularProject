@@ -1,40 +1,81 @@
-.vente-add-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Style général de la container */
+.container {
+  background-color: rgb(244, 246, 248);
+  border-radius: 25px;
+  padding: 50px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet élégant */
+  gap: 50px; 
+}
+
+/* Style pour la section de formulaire */
+.form-section {
+  flex: 1; /* Le formulaire occupe une part égale avec l'image */
+  margin-right: 20px; /* Espacement entre le formulaire et l'image */
+  padding: 2px;
+}
+
+/* Style pour les champs de saisie */
+.form-section input {
+  width: 70%; /* Limiter la largeur des inputs */
+}
+
+/* Titre du formulaire */
+.form-section h1 {
+  font-family: 'Lucida Sans', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(125, 172, 219);
+}
+
+/* Style de l'image */
+.addclient {
+  width: 40%; /* L'image occupe 40% de la largeur */
+}
+
+/* Style du bouton */
+.Wbtn {
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 7px 23px;
+  background-color: rgb(125, 172, 219);
+  color: black;
+  width: 30%;
+}
+
+.Wbtn:hover {
+  color: white;
+  background-color: rgb(161, 193, 224);
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Passage à une disposition en colonne */
+      padding: 20px; /* Réduction de l'espacement */
   }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+  /* Les champs de saisie s'étendent sur toute la largeur */
+  .form-section input {
+      width: 100%;
   }
-  
-  .form-group {
-    margin-bottom: 15px;
+
+  /* Suppression de la marge à droite et ajout d'un espacement vertical */
+  .form-section {
+      margin-right: 0;
+      margin-bottom: 20px;
   }
-  
-  label {
-    font-weight: bold;
+
+  /* L'image occupe toute la largeur sur les petits écrans */
+  .addclient {
+      width: 100%;
   }
-  
-  input.form-control {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+  /* Le bouton occupe toute la largeur sur les petits écrans */
+  .Wbtn {
+      width: 100%;
   }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-  }
-  
-  .invalid-feedback {
-    color: red;
-    font-size: 0.875rem;
-  }
-  
+}

@@ -1,0 +1,127 @@
+
+
+  
+  /* Conteneur principal */
+  .home-container {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animation pour le texte */
+  .text-container {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Animation du texte de bienvenue */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+  }
+  
+  /* Conteneur image */
+  .image-container {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Image de bienvenue */
+  .welcome-image {
+    width: 23%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Cartes d'information */
+  .info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: #bbddee;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #17191a;
+  }
+  
+ 
+  
+
+  
+  /* Pour les petits écrans (smartphones et tablettes) */
+@media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .welcome-image {
+      width: 80%; /* L'image sera plus petite sur les petits écrans */
+    }
+  
+    .info-cards {
+      flex-direction: column; /* Les cartes s'empilent */
+      align-items: center; /* Centrer les cartes */
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .card {
+      width: 80%; /* Les cartes prennent toute la largeur de l'écran sur les petits écrans */
+    }
+  }
+  
+  /* Pour les écrans très petits (par exemple, téléphones mobiles) */
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .welcome-image {
+      width: 90%; /* L'image devient presque aussi large que l'écran */
+    }
+  
+    .card {
+      width: 100%; 
+    }
+  }

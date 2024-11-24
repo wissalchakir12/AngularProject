@@ -9,13 +9,24 @@
 }
 .client-list-card {
   width: 90%;
-  margin: 20px auto;
+  margin: 90px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: rgb(244, 246, 248);
 
 
+}
+.no-products-message {
+  text-align: center;
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.no-products-message i {
+  margin-right: 10px;
 }
 
 

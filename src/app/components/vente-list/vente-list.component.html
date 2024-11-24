@@ -1,35 +1,41 @@
-<h2>Liste des ventes</h2>
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Produit</th>
-      <th>Quantité</th>
-      <th>Date</th>
-      <th>Client</th>
-      
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let vente of ventes">
-      <td>{{ vente.id }}</td>
-      <td>{{ vente.produit }}</td>
-      <td>{{ vente.quantite }}</td>
-      <td>{{ vente.date }}</td>
-      <td>{{ vente.client }}</td>
-      
-     
-      <td>
-        <!-- Pour modifier je dois passer les ids des ventes pour récupérer les informations de la vente lors de la modification  -->
-        <button (click)="deleteVente(vente.id)">Delete</button>
-        <a [routerLink]="['/vente-edit', vente.id]" class="btn btn-warning btn btn-warning btn-sm Edit mb-2 mb-sm-0  Edit">
-          <i class="fas fa-edit"></i> Edit
-        </a>
-        
-        
+<div class="ventes-list-card">
+  <h2>Liste des ventes</h2>
 
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <!-- Vérifier si le tableau des ventes est vide -->
+  <div *ngIf="ventes.length === 0" class="no-products-message">
+    <i class="fas fa-exclamation-circle"></i> Aucune vente à afficher
+  </div>
+
+  <!-- Table des ventes avec les classes Bootstrap -->
+  <table *ngIf="ventes.length > 0" class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        
+        <th>Produit</th>
+        <th>Quantité</th>
+        <th>Date</th>
+        <th>Client</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vente of ventes">
+        
+        <td>{{ vente.produitName }}</td>
+        <td>{{ vente.quantite }}</td>
+        <td>{{ vente.date }}</td>
+        <td>{{ vente.clientName }}</td>
+        <td>
+          <button (click)="deleteVente(vente.id)" class="btn btn-danger btn-sm delete">
+            <i class="fas fa-trash"></i> Delete
+          </button>
+          <a [routerLink]="['/vente-edit', vente.id]" class="btn btn-warning btn-sm Edit">
+            <i class="fas fa-edit"></i> Edit
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a routerLink="/vente-add" class="btn btn-primary mb-3 Wbtn">Add Vente</a>
+</div>

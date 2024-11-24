@@ -4,5 +4,8 @@ export class Vente {
     produit!: number;
     date!: string;
     quantite!: number;
+    clientName!: string;
+    produitName!: string;
+
     
   }

@@ -9,6 +9,7 @@ import { ProduitEditComponent } from './components/produit-edit/produit-edit.com
 import { VenteListComponent } from './components/vente-list/vente-list.component';
 import { VenteAddComponent } from './components/vente-add/vente-add.component';
 import { VenteEditComponent } from './components/vente-edit/vente-edit.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [

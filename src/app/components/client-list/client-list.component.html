@@ -5,8 +5,8 @@
   <h2>Liste des clients</h2>
 
   <!-- Vérifier si le tableau clients est vide -->
-  <div *ngIf="clients.length === 0" class="alert alert-info text-center mt-4">
-    <i class="fas fa-info-circle"></i> Aucun client à afficher.
+  <div *ngIf="clients.length === 0" class="no-products-message">
+    <i class="fas fa-exclamation-circle"></i> Aucun client à afficher
   </div>
 
   <!-- Table des clients avec les classes Bootstrap -->
