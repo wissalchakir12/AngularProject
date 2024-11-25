@@ -17,6 +17,8 @@ import { VenteEditComponent } from './components/vente-edit/vente-edit.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     VenteAddComponent,
     VenteEditComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
 
   ],
   imports: [

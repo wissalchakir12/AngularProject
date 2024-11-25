@@ -5,6 +5,8 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(155, 152, 152, 0.1);
   background-color: #F5F7F8;
+  overflow-y: auto;
+  height: 60%;
 }
 .client-count1{
   background-color: #F5F5F5;
@@ -15,7 +17,6 @@
   margin:15px;
   width:20%;
 }
-
 p{
   color:gray;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -45,6 +46,7 @@ margin-right: 5px;}
   justify-content: center; 
   align-items: center; 
   min-height: 100vh; 
+  
 }
 .nbre i{
   margin-top: 3px;

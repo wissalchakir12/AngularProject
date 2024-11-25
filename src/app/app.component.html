@@ -1,5 +1,18 @@
-<div class="container">
-    <app-navbar></app-navbar>
-    <router-outlet />
-</div>
-
+<div class="dashboard-container">
+    <div class="sidebar">
+      <!-- Menu de navigation -->
+      <app-navbar class="navbar"></app-navbar>
+    </div>
+    
+    <div class="main-content">
+      <!-- En-tête du tableau de bord -->
+      <app-header class="header"></app-header>
+  
+      <!-- Contenu principal -->
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
+  

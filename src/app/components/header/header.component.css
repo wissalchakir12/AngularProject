@@ -1,0 +1,93 @@
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+  
+  .logo {
+    
+    font-weight: bold;
+    color: black;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  .search-button{
+    display: flex; /* Active le mode flexbox */
+    align-items: center; /* Centre l'icône verticalement */
+    justify-content: center;
+  }
+   input{
+    border-radius: 5px;
+    height:70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+   }
+   i{
+    color:lightgray;
+ 
+   }
+
+   button{
+    border-radius: 5px;
+    height:70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+   }
+  
+  
+  
+/* Pour tablettes */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Empile les éléments */
+        align-items: flex-start; /* Aligne à gauche */
+        gap: 10px; /* Ajoute un espace entre les éléments */
+    }
+
+    .logo {
+        font-size: 1.25rem; /* Réduit la taille du texte */
+    }
+
+    .search-bar {
+        width: 100%; /* La barre de recherche prend toute la largeur */
+    }
+
+    input {
+        width: 50%; /* Barre de recherche responsive */
+        font-size: 0.9rem; /* Texte plus petit */
+    }
+
+    button {
+        font-size: 0.9rem; /* Ajuste la taille du bouton */
+        padding: 5px;
+    }
+}
+
+/* Pour mobiles */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1rem; /* Réduit davantage la taille du texte */
+    }
+
+    input {
+        font-size: 0.8rem; /* Texte encore plus petit */
+        padding: 6px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        height: 35px; /* Bouton plus petit */
+    }
+}
+  
+ 
+  
