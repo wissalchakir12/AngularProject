@@ -10,6 +10,7 @@ import { VenteListComponent } from './components/vente-list/vente-list.component
 import { VenteAddComponent } from './components/vente-add/vente-add.component';
 import { VenteEditComponent } from './components/vente-edit/vente-edit.component';
 import { HomeComponent } from './components/home/home.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'vente-add', component: VenteAddComponent },
   { path: 'ventes', component: VenteListComponent },
   { path: 'vente-edit/:id', component: VenteEditComponent },
+  { path: 'stati', component: StatisticsComponent },
 
 
 

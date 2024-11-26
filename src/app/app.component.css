@@ -30,6 +30,7 @@
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  
 }
 
 .header {
@@ -48,8 +49,7 @@
   flex: 1;
   background-color: #ecf0f1;
   padding: 20px;
-  
-  height: calc(100vh - 80px);
+height: calc(100vh - 80px);
 }
 
 /* Responsiveness */

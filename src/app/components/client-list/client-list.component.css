@@ -1,12 +1,14 @@
 .client-list-card {
-  margin-left: 170px;
+  
   width: 60vw; 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(155, 152, 152, 0.1);
   background-color: #F5F7F8;
   overflow-y: auto;
-  height: 60%;
+  margin-bottom: 50px;
+  
+  
 }
 .client-count1{
   background-color: #F5F5F5;

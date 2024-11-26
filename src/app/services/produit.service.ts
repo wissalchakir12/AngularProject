@@ -40,4 +40,8 @@ export class ProduitService {
   deleteAllProduits(): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/vider`);
   }
+
+  getTopStockedProducts(): Observable<Produit[]> {
+    return this.http.get<Produit[]>(`${this.baseUrl}/top-stocked`);
+  }
 }

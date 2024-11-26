@@ -24,7 +24,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 30px;
-    color: rgb(125, 172, 219);
+    color:black;
 }
 
 .addclient {
@@ -35,14 +35,14 @@
     border: 1px solid gray;
     border-radius: 15px;
     padding: 7px 23px; 
-    background-color: rgb(125, 172, 219);
-    color: black;
+    background-color: rgb(102, 107, 112);
+    color: white;
     width: 30%;
 }
 
 .Wbtn:hover {
-    color: white;
-    background-color: rgb(161, 193, 224);
+    color: black;
+    background-color: lightgray;
 }
 
 @media (max-width: 768px) {

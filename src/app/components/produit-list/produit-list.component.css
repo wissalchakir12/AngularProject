@@ -5,17 +5,18 @@
   align-items: center; 
   min-height: 100vh; 
 }
- 
 
 .client-list-card {
-  margin-left: 170px;
   width: 60vw; 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(155, 152, 152, 0.1);
   background-color: #F5F7F8;
- 
+  overflow-y: auto; /* Permet le défilement vertical */
+  max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de la fenêtre */
+  margin-bottom: 50px;
 }
+
 .no-products-message {
   text-align: center;
   color: #000000;
@@ -30,12 +31,12 @@
 
 .Wbtn{
   border: 1px solid gray;
-    border-radius: 15px;
-    padding:7px 23px; 
-    background-color: #EEEEEE;
-    color: black;
-    
+  border-radius: 15px;
+  padding:7px 23px; 
+  background-color: #EEEEEE;
+  color: black;
 }
+
 .Wbtn:hover{
   color: white;
   background-color: grey;
@@ -48,12 +49,11 @@
   color: black;
 }
 
-
-
 .Edit:hover {
   color: white;
   background-color: rgb(49, 235, 86);
 }
+
 .Edit{
   background-color: rgb(105, 224, 129);
 }
@@ -66,10 +66,11 @@
   font-size: 14px; 
   color: black;
   width: 10%; 
-display: inline-flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
+
 .delete{
   background-color: rgb(232, 103, 103);
 }

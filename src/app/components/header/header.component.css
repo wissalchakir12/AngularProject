@@ -2,23 +2,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0;
+   
     margin: 0;
 }
   
-  .logo {
-    
-    font-weight: bold;
+i{
+    margin-top: 7px;
     color: black;
-  }
+}
+
   
   .search-bar {
     display: flex;
     align-items: center;
   }
   .search-button{
-    display: flex; /* Active le mode flexbox */
-    align-items: center; /* Centre l'icône verticalement */
+    display: flex; 
+    align-items: center; 
     justify-content: center;
   }
    input{

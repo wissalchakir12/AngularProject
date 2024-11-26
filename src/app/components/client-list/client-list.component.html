@@ -1,22 +1,15 @@
 <div class="container">
-
-  
-  
-  
-
-  
   <div class="client-list-card">
     <h2>Liste des clients</h2>
 
-    <!-- Vérifier si le tableau clients est vide -->
-    <div *ngIf="clients.length === 0" class="no-products-message">
+    <!-- Vérifie si aucun client ne correspond -->
+    <div *ngIf="filteredClients.length === 0" class="no-products-message">
       <i class="fas fa-exclamation-circle"></i> Aucun client à afficher
     </div>
 
-    <!-- Table des clients avec les classes Bootstrap -->
+    <!-- Table des clients filtrés -->
     <div class="table-responsive">
-      
-      <table *ngIf="clients.length > 0" class="table table-striped table-bordered">
+      <table *ngIf="filteredClients.length > 0" class="table table-striped table-bordered">
         <thead class="thead-dark">
           <tr>
             <th>Nom</th>
@@ -28,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let client of clients">
+          <tr *ngFor="let client of filteredClients">
             <td>{{ client.nom }}</td>
             <td>{{ client.prenom }}</td>
             <td>{{ client.tel }}</td>
