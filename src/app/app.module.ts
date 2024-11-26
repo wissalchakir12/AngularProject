@@ -22,7 +22,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
-import { HighchartsChartModule } from 'highcharts-angular';
+import { HighchartsChartModule } from 'highcharts-angular'; 
 
 @NgModule({
   declarations: [
