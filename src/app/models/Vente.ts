@@ -6,6 +6,8 @@ export class Vente {
     quantite!: number;
     clientName!: string;
     produitName!: string;
+    prixTotal!: number;
+    chiffreAffaire!:number
 
     
   }

@@ -36,4 +36,21 @@ export class VenteService {
   deleteVente(id: number): Observable<Vente> {
     return this.http.delete<Vente>(`${this.baseUrl}/${id}`);
   }
+ //xoxo pour avoir les ventes par date
+
+ /*
+{
+ id produit +  date de la vente
+
+ }
+ */ 
+  getVentebyDate(): Observable<Vente[]> {
+    return this.http.get<Vente[]>(`${this.baseUrl}/par-date`);
+  }
+
+
+  prixTotal(id:number){
+    return this.http.get<number>(`${this.baseUrl}/${id}/prix-total`);
+  }
+  
 }

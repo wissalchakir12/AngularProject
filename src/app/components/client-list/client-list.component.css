@@ -7,6 +7,8 @@
   background-color: #F5F7F8;
   overflow-y: auto;
   margin-bottom: 50px;
+  overflow-y: auto; /* Permet le défilement vertical */
+  max-height: calc(100vh - 150px); /* Ajustez cette valeur selon l'espace que vous souhaitez réserver au-dessus ou en dessous du tableau */
   
   
 }

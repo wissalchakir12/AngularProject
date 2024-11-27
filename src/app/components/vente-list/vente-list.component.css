@@ -13,10 +13,11 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(155, 152, 152, 0.1);
   background-color: #F5F7F8;
-  overflow-y: auto;
+  overflow-y: auto; /* Permet le défilement vertical */
+  max-height: calc(100vh - 150px); /* Ajustez cette valeur selon l'espace que vous souhaitez réserver au-dessus ou en dessous du tableau */
   margin-bottom: 50px;
- 
 }
+
 .no-products-message {
   text-align: center;
   color: #000000;

@@ -14,7 +14,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 
 
 const routes: Routes = [
-  { path: '', component: ClientListComponent }, // La page d'accueil
+  { path: '', component: StatisticsComponent }, // La page d'accueil
   { path: 'clients', component: ClientListComponent }, // Liste des clients
   { path: 'add-client', component: ClientAddComponent }, // La route vers le formulaire d'ajout
   { path: 'edit-client/:id', component: ClientEditComponent },// Route d'édition de client avec ID

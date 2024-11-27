@@ -14,6 +14,7 @@ import { SearchService } from '../../shared/search.service';
 export class VenteListComponent implements OnInit {
   ventes: Vente[] = [];
   filteredVentes: Vente[] = [];
+  chiffreAffaire: number = 0; // Propriété pour stocker le chiffre d'affaires total
 
   constructor(
     private http: HttpClient,
@@ -34,14 +35,20 @@ export class VenteListComponent implements OnInit {
           vente.produitName = produit.nom;
         });
 
+        this.venteService.prixTotal(vente.id).subscribe((prixTotal) => {
+          vente.prixTotal = prixTotal;
+
+          // Recalculer le chiffre d'affaires après avoir ajouté le prix total
+          this.calculateChiffreAffaire();
+        });
+
         return vente;
       });
 
       this.ventes = ventesWithDetails;
-      this.filteredVentes = ventesWithDetails; // Initialisation des ventes filtrées
+      this.filteredVentes = ventesWithDetails; 
     });
 
-    // Mettre à jour les ventes filtrées en fonction du terme de recherche
     this.searchService.currentSearchTerm.subscribe((term) => {
       this.filterVentes(term);
     });
@@ -56,11 +63,22 @@ export class VenteListComponent implements OnInit {
     );
   }
 
+  // CA ==> chiffre d'affaire total
+  calculateChiffreAffaire(): void {
+    this.chiffreAffaire = this.ventes.reduce((total, vente) => {
+      return total + (vente.prixTotal || 0);
+    }, 0);
+    
+    // pour arrondir : 2 ar9am wra fassila hihi 
+    this.chiffreAffaire = parseFloat(this.chiffreAffaire.toFixed(2));
+  }
+  
   // Supprimer une vente
   deleteVente(id: number): void {
     this.venteService.deleteVente(id).subscribe(() => {
       this.ventes = this.ventes.filter((vente) => vente.id !== id);
-      this.filterVentes(''); // Mettre à jour les ventes filtrées
+      this.calculateChiffreAffaire(); // Recalculer après suppression
+      this.filterVentes('');
     });
   }
 }
