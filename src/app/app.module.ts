@@ -22,7 +22,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
-import { HighchartsChartModule } from 'highcharts-angular'; 
+import { HighchartsChartModule } from 'highcharts-angular';
+import { LoginComponent } from './components/login/login.component'; 
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     NavbarComponent,
     HomeComponent,
     HeaderComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

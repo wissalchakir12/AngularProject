@@ -26,12 +26,20 @@
           <td>{{ vente.date }}</td>
           <td>{{ vente.clientName }}</td>
           <td>
+            <!-- Bouton pour supprimer -->
             <button (click)="deleteVente(vente.id)" class="btn btn-danger btn-sm delete">
               <i class="fas fa-trash"></i> Delete
             </button>
-            <a [routerLink]="['/vente-edit', vente.id]" class="btn btn-warning btn-sm Edit">
+            
+            <!-- Bouton pour modifier -->
+            <a [routerLink]="['/vente-edit', vente.id]" class="btn btn-warning btn-sm edit">
               <i class="fas fa-edit"></i> Edit
             </a>
+            
+            <!-- Bouton pour générer une facture -->
+            <button style="margin-left: 5px;" (click)="generateInvoice(vente)" class="btn btn-success btn-sm invoice">
+              <i class="fas fa-file-pdf"></i> Facture
+            </button>
           </td>
           <td>{{ vente.prixTotal }} $</td>
         </tr>
@@ -44,6 +52,7 @@
       </tfoot>
     </table>
 
-    <a routerLink="/vente-add" class="btn btn-primary mb-3 Wbtn">Add Vente</a>
+    <!-- Lien pour ajouter une nouvelle vente -->
+    <a routerLink="/vente-add" class="btn btn-primary mb-3 wbtn">Add Vente</a>
   </div>
 </div>
